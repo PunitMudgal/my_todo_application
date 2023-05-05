@@ -1,0 +1,30 @@
+.todoList{
+    margin: 0 21.5vh;
+    padding: 1rem 2rem;
+    background-color: var(--color-dark);
+    border-radius: 0 0 15px 15px;
+}
+
+.todoList-content{
+    display: flex;
+    flex-direction: column;
+}
+
+.NoTodo{
+    color: yellow;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.todoList-list{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    gap: 5px;
+}
+
+@media screen and (max-width: 900px){
+    .todoList{
+        margin: 0;
+    }
+}

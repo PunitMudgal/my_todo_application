@@ -1,0 +1,26 @@
+.notification{
+    position: absolute;
+    top: 1%;
+    right: 0.1%;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-pri);
+    max-width: fit-content;
+    background-color:yellow;
+    border-radius: 10px;
+    padding : 5px 1rem;
+
+}
+
+.notification h5{
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 800;
+  }
+
+.notification p{
+    text-transform: capitalize;
+    font-size: 16px;
+    color:darkorange;
+    font-weight: 600;
+  }
