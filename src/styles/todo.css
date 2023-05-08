@@ -4,6 +4,7 @@
     justify-content: space-between;
     align-items: center;
     align-self: center;
+    position: relative;
     background-color: var(--color-light);
     padding: 1rem;
     border-radius: 8px;
@@ -45,7 +46,13 @@
     gap: 5px;
 }
 
-
+.todo-dateTime{
+    position: absolute;
+    max-width: fit-content;
+    font-size: 12px;
+    bottom: 2px;
+    right: 5px;
+}
 
 @media screen and (max-width: 900px){
     .todoItem{

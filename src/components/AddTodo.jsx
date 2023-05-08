@@ -23,6 +23,11 @@ function AddTodo({ alert, handleAlert }) {
     });
   };
 
+  // date & time
+const fullDate = new Date();
+const date = fullDate.getDate() + '/' + fullDate.getMonth() + '/' + fullDate.getFullYear();
+const time = fullDate.getHours() + ':' + fullDate.getMinutes()
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -31,6 +36,8 @@ function AddTodo({ alert, handleAlert }) {
         title: todo.title,
         des: todo.desc,
         done: false,
+        time: time,
+        date: date,
       });
       setTodo({ title: "", desc: "" });
     } catch (err) {

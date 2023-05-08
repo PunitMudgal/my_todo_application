@@ -3,11 +3,11 @@ import "./App.css";
 import AddTodo from "./components/AddTodo";
 import TodoList from "./components/TodoList";
 import {
-  QuerySnapshot,
   collection,
   deleteDoc,
   doc,
   onSnapshot,
+  orderBy,
   query,
   updateDoc,
 } from "firebase/firestore";
@@ -19,7 +19,7 @@ function App() {
 
   //Read todos from firebase
   useEffect(() => {
-    const q = query(collection(db, "todos"));
+    const q = query(collection(db, "todos"), orderBy("date", "asc"));
     const unsubscribe = onSnapshot(q, (QuerySnapshot) => {
       let todosArray = [];
       QuerySnapshot.forEach((doc) => {
@@ -37,25 +37,29 @@ function App() {
       setAlert({ type: null, msg: null });
     }, 3000);
   };
- 
+
   // delete todo
-  const deleteTodo = async(todoId) => {
-  await  deleteDoc(doc(db, 'todos', todoId))
-  handleAlert('success', 'Task Deleted')
-  }
+  const deleteTodo = async (todoId) => {
+    await deleteDoc(doc(db, "todos", todoId));
+    handleAlert("success", "Task Deleted");
+  };
 
   // update todo
-  const toggleDone = async(todo) => {
-    await updateDoc(doc(db, 'todos', todo.id), {
-      done: !todo.done
-    })
-  }
+  const toggleDone = async (todo) => {
+    await updateDoc(doc(db, "todos", todo.id), {
+      done: !todo.done,
+    });
+  };
 
   return (
     <>
       <div className="app">
         <AddTodo alert={alert} handleAlert={handleAlert} />
-        <TodoList todos={todos} deleteTodo={deleteTodo} toggleDone={toggleDone} />
+        <TodoList
+          todos={todos}
+          deleteTodo={deleteTodo}
+          toggleDone={toggleDone}
+        />
       </div>
     </>
   );

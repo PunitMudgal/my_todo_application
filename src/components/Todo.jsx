@@ -9,11 +9,8 @@ function Todo({ todo, handleDelete, toggleDone }) {
   textDecorationColor: 'red',
  }
 
- const faltu = {
-  // kuch bhi
- }
- 
-// {textDecoration: todo.done? 'line-through' : 'none', textDecorationColor: 'red',  }
+//  console.log(fullDate)
+
   return (
     <>
       <div className="todoItem box-shadow3" style={{backgroundColor: todo.done? '#FADBD8' : '#82DBD8'}} >
@@ -26,7 +23,7 @@ function Todo({ todo, handleDelete, toggleDone }) {
               onClick={() => toggleDone(todo)}
             />
           )}
-          <div className="todoItem-content" style={todo.done? todoDoneStyles : faltu}>
+          <div className="todoItem-content" style={todo.done? todoDoneStyles : null}>
             <h5>{todo.title}</h5>
             <p>{todo.des}</p>
           </div>
@@ -35,6 +32,7 @@ function Todo({ todo, handleDelete, toggleDone }) {
           <FaRegEdit size={22} />
           <FaTrash onClick={() => handleDelete(todo.id)} size={22} />
         </div>
+        <p className="todo-dateTime">{todo.date +" "+ todo.time}</p>
       </div>
     </>
   );
