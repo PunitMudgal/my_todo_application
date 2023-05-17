@@ -18,7 +18,8 @@
 
 }
 body{
-    background-color: var(--color-light);
+    /* background-color: var(--color-light); */
+    background-color: #0F4C75;
     font-family: var(--font-pri);
 }
 

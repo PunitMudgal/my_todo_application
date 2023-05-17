@@ -1,11 +1,6 @@
 .todo{
-    /* margin: 2rem 3rem; */
-    margin: 0 10vw;
-    background: var(--color-dark);
     padding: 1rem 2rem;
     font-family: var(--font-pri);
-    /* border-radius: 15px; */
-    border-radius: 15px 15px 0 0 ;
 }
 
 .todo-content{
@@ -31,7 +26,7 @@
     border-bottom: 3px solid var(--color-light);
     font-size: 17px;
     padding: 1rem;
-    background-color: var(--color-medium);
+    background-color:#3282B8;
     border-radius: 5px;
     width: 60%;
     color: black;
@@ -52,14 +47,12 @@
     border-radius: 10px;
     font-weight: 600;
     align-self: center;
-
+    border: 1px solid #ff008c;
 }
 
 @media screen and (max-width:900px){
     .todo{
-        margin: 8vw;
         padding: 1rem 1.5;
-        margin: 0;
     }
 
     .todo-content span{
@@ -75,6 +68,5 @@
 
     .todo-content button{
         padding: 0.6rem;
-        /* font-weight: 500; */
     }
 }

@@ -76,7 +76,7 @@ function App() {
 
   return (
     <>
-      <div className="app">
+      <div className="app box-shadow2">
         <AddTodo alert={alert} handleAlert={handleAlert} />
         <TodoList
           updateTodoHandler={updateTodoHandler}

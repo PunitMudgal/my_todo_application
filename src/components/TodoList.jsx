@@ -14,7 +14,7 @@ export default function TodoList({
   // const [savedTodos, setSavedTodos] = useState([]);
 
   return (
-    <div className="todoList box-shadow3">
+    <div className="todoList">
       <div className="todoList-content">
         <h1>TODO LIST</h1>
         <div className="todoList-list">

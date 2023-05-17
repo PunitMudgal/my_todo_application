@@ -49,7 +49,7 @@ const time = fullDate.getHours() + ':' + fullDate.getMinutes()
   };
 
   return (
-    <div className="todo box-shadow3">
+    <div className="todo">
       <h1>TODO APP</h1>
       <Notification alert={alert} />
       <div className="todo-content">
