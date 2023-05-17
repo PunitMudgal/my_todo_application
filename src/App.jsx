@@ -44,11 +44,34 @@ function App() {
     handleAlert("success", "Task Deleted");
   };
 
-  // update todo
+  // complete button
   const toggleDone = async (todo) => {
     await updateDoc(doc(db, "todos", todo.id), {
       done: !todo.done,
     });
+  };
+
+  // update value in todo (edit btn)
+  const handleEditBtn = (id) => {
+    updateDoc(doc(db, "todos", id),{
+      edit: true
+    })
+  };
+
+  const updateTodoHandler = async (title, des, id) => {
+    await updateDoc(doc(db, "todos", id), {
+      title,
+      des,
+      isUpdated: true,
+      edit: false
+    });
+    handleAlert("success", "Task Updated");
+  };
+
+  const handleCancel = (id) => {
+     updateDoc(doc(db, "todos", id),{
+      edit: false
+    })
   };
 
   return (
@@ -56,9 +79,12 @@ function App() {
       <div className="app">
         <AddTodo alert={alert} handleAlert={handleAlert} />
         <TodoList
-          todos={todos}
+          updateTodoHandler={updateTodoHandler}
+          handleEditBtn={handleEditBtn}
           deleteTodo={deleteTodo}
           toggleDone={toggleDone}
+          todos={todos}
+          handleCancel={handleCancel}
         />
       </div>
     </>

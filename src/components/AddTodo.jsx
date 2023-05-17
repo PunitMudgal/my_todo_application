@@ -38,6 +38,8 @@ const time = fullDate.getHours() + ':' + fullDate.getMinutes()
         done: false,
         time: time,
         date: date,
+        isUpdated: false,
+        edit: false
       });
       setTodo({ title: "", desc: "" });
     } catch (err) {
