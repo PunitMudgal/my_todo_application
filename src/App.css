@@ -1,5 +1,12 @@
-.app{
-    margin: 5% 15%;    background-color: #1B262C;
-    border:2px solid black;
-    border-radius: 15px;
+.app {
+  margin: 5% 15%;
+  background-color: #1b262c;
+  border: 2px solid black;
+  border-radius: 15px;
+}
+
+@media screen and (max-width: 800px) {
+  .app {
+    margin: 5% 9%;
+  }
 }

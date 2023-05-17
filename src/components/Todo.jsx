@@ -65,7 +65,7 @@ function Todo({ todo, handleDelete, toggleDone, updateTodo, handleEditBtn, updat
         </div>
         <div className="todoItem-btn">
           <FaRegEdit size={22} onClick={() => handleEditBtn(todo.id)} />
-          <FaTrash onClick={() => handleDelete(todo.id)} size={22} />
+          <FaTrash size={22} onClick={() => handleDelete(todo.id)} />
         </div>
         <p className="todo-dateTime">{todo.date + " " + todo.time}</p>
       </div>

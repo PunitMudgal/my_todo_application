@@ -99,4 +99,10 @@
   .todoItem-btn {
     display: flex;
   }
+
+  .todo-dateTime {
+    font-size: 9px;
+    bottom: 0;
+    right: 1px;
+  }
 }
