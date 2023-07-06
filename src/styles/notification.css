@@ -1,26 +1,26 @@
-.notification{
-    position: absolute;
-    top: 1vh;
-    right: 1vh;
-    display: flex;
-    flex-direction: column;
-    font-family: var(--font-pri);
-    max-width: fit-content;
-    background-color:yellow;
-    border-radius: 10px;
-    padding : 5px 1rem;
-
+.notification {
+  position: absolute;
+  top: 1vh;
+  right: 1vh;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-pri);
+  max-width: fit-content;
+  background-color: yellow;
+  border-radius: 10px;
+  padding: 5px 1rem;
+  position:fixed;
 }
 
-.notification h5{
-    text-transform: uppercase;
-    font-size: 20px;
-    font-weight: 800;
-  }
+.notification h5 {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 800;
+}
 
-.notification p{
-    text-transform: capitalize;
-    font-size: 16px;
-    color:darkorange;
-    font-weight: 600;
-  }
+.notification p {
+  text-transform: capitalize;
+  font-size: 16px;
+  color: darkorange;
+  font-weight: 600;
+}
